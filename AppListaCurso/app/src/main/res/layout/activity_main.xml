@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app"
@@ -30,7 +30,8 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/text_title"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/editTextPrimaryName"
@@ -42,7 +43,8 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSecondName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSecondName"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/editTextCourse"
@@ -54,7 +56,8 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPrimaryName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPrimaryName"
+        tools:ignore="Autofill"/>
 
     <EditText
         android:id="@+id/editTextPhone"
@@ -67,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCourse"
-        tools:ignore="TextFields" />
+        tools:ignore="Autofill,TextFields" />
 
     <Button
         android:id="@+id/buttonClear"
@@ -76,7 +79,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="12dp"
         android:backgroundTint="@color/buttonColor"
-        android:text="Limpar"
+        android:text="@string/clear"
         android:textAllCaps="true"
         android:textColorLink="#6BB6DE"
         app:layout_constraintBottom_toTopOf="@+id/buttonFinal"
@@ -90,7 +93,7 @@
         android:layout_marginStart="164dp"
         android:layout_marginBottom="12dp"
         android:backgroundTint="@color/buttonColor"
-        android:text="Salvar"
+        android:text="@string/save"
         android:textAllCaps="true"
         app:layout_constraintBottom_toTopOf="@+id/buttonFinal"
         app:layout_constraintStart_toEndOf="@+id/buttonClear"
@@ -103,7 +106,7 @@
         android:layout_margin="16dp"
         android:layout_marginBottom="288dp"
         android:backgroundTint="@color/buttonColor"
-        android:text="Finalizar"
+        android:text="@string/end"
         android:textAllCaps="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
