@@ -14,11 +14,14 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import devandroid.joy.applistacurso.R;
+import devandroid.joy.applistacurso.controller.PessoaController;
 import devandroid.joy.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
-    Pessoa pessoa1;
+    PessoaController pessoaController;
+
+    Pessoa pessoa;
     Pessoa pessoa2;
 
     EditText editPrimeiroNome;
@@ -40,7 +43,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        pessoa1 = new Pessoa();
+        pessoaController = new PessoaController();
+        pessoaController.toString();
+
+        pessoa = new Pessoa();
 
         pessoa2 = new Pessoa();
         pessoa2.setPrimeiroNome("Francisco");
@@ -57,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
         buttonSalvar = findViewById(R.id.buttonSalvar);
         buttonFinalizar = findViewById(R.id.buttonFinalizar);
 
-        editPrimeiroNome.setText(pessoa1.getPrimeiroNome());
-        editSobrenome.setText(pessoa1.getSobreNome());
-        editNomeCurso.setText(pessoa1.getCursoDesejado());
-        editTelefoneContato.setText(pessoa1.getTelefoneContato());
+        editPrimeiroNome.setText(pessoa.getPrimeiroNome());
+        editSobrenome.setText(pessoa.getSobreNome());
+        editNomeCurso.setText(pessoa.getCursoDesejado());
+        editTelefoneContato.setText(pessoa.getTelefoneContato());
 
         buttonLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,16 +89,18 @@ public class MainActivity extends AppCompatActivity {
         buttonSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pessoa1.setPrimeiroNome(editPrimeiroNome.getText().toString());
-                pessoa1.setSobreNome(editSobrenome.getText().toString());
-                pessoa1.setCursoDesejado(editNomeCurso.getText().toString());
-                pessoa1.setTelefoneContato(editTelefoneContato.getText().toString());
+                pessoa.setPrimeiroNome(editPrimeiroNome.getText().toString());
+                pessoa.setSobreNome(editSobrenome.getText().toString());
+                pessoa.setCursoDesejado(editNomeCurso.getText().toString());
+                pessoa.setTelefoneContato(editTelefoneContato.getText().toString());
 
                 Toast.makeText(MainActivity.this, "Salvo " + pessoa2.toString(), Toast.LENGTH_LONG).show();
+
+                pessoaController.salvar(pessoa);
             }
         });
 
-        Log.i("POOAndroid", pessoa1.toString());
+        Log.i("POOAndroid", pessoa.toString());
         Log.i("POOAndroid", pessoa2.toString());
 
     }
