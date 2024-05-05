@@ -48,26 +48,24 @@ public class MainActivity extends AppCompatActivity {
         pessoaController.toString();
 
         pessoa = new Pessoa();
-
-        pessoa2 = new Pessoa();
-        pessoa2.setPrimeiroNome("Francisco");
-        pessoa2.setSobreNome("Assis");
-        pessoa2.setCursoDesejado("Android");
-        pessoa2.setTelefoneContato("51-998653211");
+        pessoa.setPrimeiroNome(preferences.getString("primeiroNome", ""));
+        pessoa.setSobreNome(preferences.getString("sobreNome", ""));
+        pessoa.setCursoDesejado(preferences.getString("nomeCurso", ""));
+        pessoa.setTelefoneContato(preferences.getString("telefoneContato", ""));
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobrenome = findViewById(R.id.editSobrenome);
         editNomeCurso = findViewById(R.id.editNomeCurso);
         editTelefoneContato = findViewById(R.id.editTelefoneContato);
 
-        buttonLimpar = findViewById(R.id.buttonLimpar);
-        buttonSalvar = findViewById(R.id.buttonSalvar);
-        buttonFinalizar = findViewById(R.id.buttonFinalizar);
-
         editPrimeiroNome.setText(pessoa.getPrimeiroNome());
         editSobrenome.setText(pessoa.getSobreNome());
         editNomeCurso.setText(pessoa.getCursoDesejado());
         editTelefoneContato.setText(pessoa.getTelefoneContato());
+
+        buttonLimpar = findViewById(R.id.buttonLimpar);
+        buttonSalvar = findViewById(R.id.buttonSalvar);
+        buttonFinalizar = findViewById(R.id.buttonFinalizar);
 
         buttonLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setCursoDesejado(editNomeCurso.getText().toString());
                 pessoa.setTelefoneContato(editTelefoneContato.getText().toString());
 
-                Toast.makeText(MainActivity.this, "Salvo " + pessoa2.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Salvo " + pessoa.toString(), Toast.LENGTH_LONG).show();
 
                 listaVip.putString("primeiroNome", pessoa.getPrimeiroNome());
                 listaVip.putString("sobreNome", pessoa.getSobreNome());
@@ -108,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Log.i("POOAndroid", pessoa.toString());
-        Log.i("POOAndroid", pessoa2.toString());
+
 
     }
 }
