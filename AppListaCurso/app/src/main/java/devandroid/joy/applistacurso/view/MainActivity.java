@@ -1,6 +1,7 @@
 package devandroid.joy.applistacurso.view;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
         dadosPessoa1 += " Sobrenome: ";
         dadosPessoa1 += pessoa1.getSobreNome();
 
-        int parada = 0;
+        Log.i("POOAndroid", pessoa1.toString());
+        Log.i("POOAndroid", pessoa2.toString());
 
     }
 }
