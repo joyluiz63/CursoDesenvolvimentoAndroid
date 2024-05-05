@@ -21,9 +21,6 @@ public class MainActivity extends AppCompatActivity {
     Pessoa pessoa1;
     Pessoa pessoa2;
 
-    String dadosPessoa1;
-    String dadosPessoa2;
-
     EditText editPrimeiroNome;
     EditText editSobrenome;
     EditText editNomeCurso;
@@ -44,11 +41,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         pessoa1 = new Pessoa();
-        //pessoa1.setPrimeiroNome("Joy");
-        //pessoa1.setSobreNome("Silva");
-        //pessoa1.setCursoDesejado("Android");
-        //pessoa1.setTelefoneContato("51-995833818");
-
 
         pessoa2 = new Pessoa();
         pessoa2.setPrimeiroNome("Francisco");
@@ -96,19 +88,12 @@ public class MainActivity extends AppCompatActivity {
                 pessoa1.setCursoDesejado(editNomeCurso.getText().toString());
                 pessoa1.setTelefoneContato(editTelefoneContato.getText().toString());
 
-                Toast.makeText(MainActivity.this, "Salvo "+pessoa2.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Salvo " + pessoa2.toString(), Toast.LENGTH_LONG).show();
             }
         });
 
-       /* dadosPessoa1 = "Primeiro nome: ";
-        dadosPessoa1 += pessoa1.getPrimeiroNome();
-        dadosPessoa1 += " Sobrenome: ";
-        dadosPessoa1 += pessoa1.getSobreNome();
-
         Log.i("POOAndroid", pessoa1.toString());
         Log.i("POOAndroid", pessoa2.toString());
-
-        */
 
     }
 }
