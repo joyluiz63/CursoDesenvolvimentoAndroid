@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_spinner);
 
         pessoaController = new PessoaController(MainActivity.this);
         pessoaController.toString();
@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
         pessoa = new Pessoa();
         pessoaController.buscar(pessoa);
 
-        editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
-        editSobrenome = findViewById(R.id.editSobrenome);
-        editNomeCurso = findViewById(R.id.editNomeCurso);
-        editTelefoneContato = findViewById(R.id.editTelefoneContato);
+        editPrimeiroNome = findViewById(R.id.editFirstName);
+        editSobrenome = findViewById(R.id.editSecondaryName);
+        editNomeCurso = findViewById(R.id.editCourseName);
+        editTelefoneContato = findViewById(R.id.editContactPhone);
 
         editPrimeiroNome.setText(pessoa.getPrimeiroNome());
         editSobrenome.setText(pessoa.getSobreNome());

@@ -4,8 +4,9 @@
     <string name="firstName">Primeiro Nome</string>
     <string name="SecondName">Sobrenome</string>
     <string name="course">Nome do Curso Desejado</string>
-    <string name="phone">Telefone de Contato</string>
+    <string name="contactPhone">Telefone de Contato</string>
     <string name="save">Salvar</string>
     <string name="clear">Limpar</string>
     <string name="end">Finalizar</string>
+    <string name="txt_select_course">Selecione um curso...</string>
 </resources>
