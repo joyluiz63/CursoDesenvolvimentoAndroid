@@ -14,16 +14,21 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.List;
+
 import devandroid.joy.applistacurso.R;
+import devandroid.joy.applistacurso.controller.CursoController;
 import devandroid.joy.applistacurso.controller.PessoaController;
+import devandroid.joy.applistacurso.model.Curso;
 import devandroid.joy.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
     PessoaController pessoaController;
+    CursoController cursoController;
 
     Pessoa pessoa;
-    Pessoa pessoa2;
+    List<Curso> listaDeCursos;
 
     EditText editPrimeiroNome;
     EditText editSobrenome;
@@ -40,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
         pessoaController = new PessoaController(MainActivity.this);
         pessoaController.toString();
+
+        cursoController = new CursoController();
+        listaDeCursos = cursoController.getCursos();
 
         pessoa = new Pessoa();
         pessoaController.buscar(pessoa);
