@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.GasEtaActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:text="@string/app"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/image_gas"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/gas"
+        android:src="@drawable/ic_launcher_gas" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/editGasolina"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="48dp"
+            android:ems="10"
+            android:hint="@string/gasolina"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/editEtanol"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/etanol"
+            android:inputType="numberDecimal"
+            tools:ignore="Autofill" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/calculate"
+        android:textAllCaps="true"
+        android:textColorLink="#6BB6DE" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/result"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/buttonLimpar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/clear"
+        android:textAllCaps="true"
+        android:textColorLink="#6BB6DE" />
+
+    <Button
+        android:id="@+id/buttonSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/buttonColor"
+        android:enabled="false"
+        android:text="@string/save"
+        android:textAllCaps="true" />
+
+    <Button
+        android:id="@+id/buttonFinalizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/end"
+        android:textAllCaps="true" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
